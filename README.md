@@ -60,6 +60,15 @@ Cela lance une fenetre VSCode. Connectez vous au conteneur Docker de tiago.
 ![Start Container](images/container.png "Start Container")
 ![Tiago Container](images/tiago_docker.png "Tiago Container")
 
+Par ailleurs, il ets recommandé d'ajouter au fichier `.bashrc` les deux lignes suivantes
+```bash
+nano ~/.bashrc
+```
+```bash
+source /opt/pal/gallium/setup.bash
+source /usr/share/cesi-tiago-package/behaviour_tree/ws_behaviotree/devel/setup.bash
+```
+
 ## Lancer une simulation de base
 
 > Les commandes qui suivent sont citées dans la documentation fournie par le CESI. Si l'image à été mise à jour, il se peut que ces commandes ne soient plus fonctionnelles ou que les chemins des fichiers soient erronés.
