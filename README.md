@@ -60,7 +60,7 @@ Cela lance une fenetre VSCode. Connectez vous au conteneur Docker de tiago.
 ![Start Container](images/container.png "Start Container")
 ![Tiago Container](images/tiago_docker.png "Tiago Container")
 
-Par ailleurs, il ets recommandé d'ajouter au fichier `.bashrc` les deux lignes suivantes
+Par ailleurs, il est recommandé d'ajouter au fichier `.bashrc` les deux lignes suivantes
 ```bash
 nano ~/.bashrc
 ```
@@ -82,3 +82,67 @@ roslaunch tiago_dual_187_gazebo tiago_dual_navigation.launch webgui:=true
 ```
 
 Gazebo et RViz devrait se lancer. Vous pouvez accéder à l'interface de controle de Tiago en utilisant: [localhost](http://localhost/). Les identifiants sont `pal` et `pal`.
+
+## Se connecter avec le vrai robot TIAGO
+
+Pour accéder à l'environnement de TIAGO depuis Docker, nous recommandons de créer un second container dont les paramètres seront légèrements différents. Dans la suite de ces explications, nous considererons le second conteneur comme `tiago-real`.
+
+Dans un premier temps, il est important sur la **machine Linux**, de saisir la commande:
+```bash
+xhost +local:
+```
+Cela permettra au nouveau conteneur de pouvoir continuer à executer des interfaces GUI.
+> Si votre Linux est installé avec un Machine Virtuelle, nous recommandons d'installer deux cartes réseaux à celle-ci. La première en mode connexion "NAT" sur votre carte Wifi. Elle permettra l'accès à internet au sein de la VM. La seconde en "Accès par pont" sur votre carte réseau Ethernet. Elle permettra une connexion avec le robot.
+
+Ensuite lancez un second conteneur qui sera dédié au connexion avec le robot TIAGO.
+```bash
+docker run \
+  -it \
+  -d \
+  -u user \
+  -e DISPLAY=$DISPLAY \
+  --network host \ 
+  --privileged \
+  -v /tmp/.X11-unix/:/tmp/.X11-unix/ \
+  --name="tiago-real" \
+  docker_tiagocesi_image_full \
+  bash
+```
+
+Au sein de ce docker il faut répéter les opérations précédentes : 
+```bash
+docker exec -it tiago-real bash
+```
+```bash
+nano ~/.bashrc
+```
+```bash
+source /opt/pal/gallium/setup.bash
+source /usr/share/cesi-tiago-package/behaviour_tree/ws_behaviotree/devel/setup.bash
+```
+
+Une fois les opérations précédentes effectuée, nous allons pouvoir préparer la machine virtuelle pour se connecter avec le robot. Pour cela il va falloir accéder temporairement au conteneur avec les droits root.
+```bash
+docker exec -it -u root tiago-real bash
+```
+```bash
+nano /etc/hosts
+```
+Rajoutez à la fin du fichier:
+> Le nom du robot est de la forme `tiago-<Numéro de série>c`. Ce numéro de série se trouve à l'arrière du robot sur une étiquette.
+```bash
+10.68.0.1   tiago-202c # Robot Tiago de Bordeaux
+```
+
+Reconnectez vous sur le docker en mode utilisateur. Nous allons modifier le fichier `.bashrc` pour que celui-ci conserve la connexion avec Tiago.
+```bash
+nano ~/.bashrc
+```
+Ajoutez
+```bash
+export ROS_MASTER_URI=http://tiago-202c:11311 # Le nom du robot est à ajuster selon le votre
+export ROS_IP=10.68.0.XX # A ajuster selon votre adresse IP dans le conteneur.
+```
+> Il est important que votre conteneur est une adresse IP dans la plage de celle de TIAGO. Ceci est normalement du au paramètre `--network` de la commande pour la création du conteneur.
+
+Pour vérifier le bon fonctionnement, executez la commande `rostopic list`. Si vous obtenez la liste des TOPICS, vous êtes correctement connectés à TIAGO.
