@@ -101,7 +101,7 @@ docker run \
   -d \
   -u user \
   -e DISPLAY=$DISPLAY \
-  --network host \ 
+  --network host \
   --privileged \
   -v /tmp/.X11-unix/:/tmp/.X11-unix/ \
   --name="tiago-real" \
