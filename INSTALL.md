@@ -44,18 +44,16 @@ docker run \
 
 > **Note pour macOS**: Sur macOS, installez XQuartz et remplacez `-e DISPLAY=$DISPLAY` par `-e DISPLAY=host.docker.internal:0`
 
-### 1.3 Configuration de l'Environnement de Développement
+### 1.3 Configuration de l'Environnement de Développement pour la Simulation
 
 1. Accédez au conteneur :
 ```bash
 docker exec -it tiago bash
 ```
 
-2. Configurez le fichier `.bashrc` :
+2. Configurez le fichier `.bashrc` avec les lignes suivantes à la fin du fichier :
 ```bash
-nano ~/.bashrc
-
-# Ajoutez ces lignes
+source /usr/share/cesi-conda/miniconda3cesi/bin/activate
 source /opt/pal/gallium/setup.bash
 source /usr/share/cesi-tiago-package/behaviour_tree/ws_behaviotree/devel/setup.bash
 ```
@@ -74,10 +72,6 @@ Exécutez les commandes suivantes dans l'ordre :
 # Démarrage des services
 sudo service apache2 start
 sudo cesi_gazebo_very_high_speed
-
-# Configuration de l'environnement
-source /opt/pal/gallium/setup.bash
-source /usr/share/cesi-tiago-package/behaviour_tree/ws_behaviotree/devel/setup.bash
 
 # Lancement de la simulation
 roslaunch tiago_dual_187_gazebo tiago_dual_navigation.launch webgui:=true
@@ -111,7 +105,7 @@ docker run \
   bash
 ```
 
-### 3.2 Configuration du Conteneur
+### 3.2 Configuration du Conteneur pour le Robot Réel
 
 1. Configuration des hôtes (en tant que root) :
 ```bash
@@ -122,38 +116,13 @@ nano /etc/hosts
 10.68.0.1   tiago-202c  # Ajustez selon votre robot
 ```
 
-2. Configuration de l'environnement ROS :
-```bash
-nano ~/.bashrc
-
-# Ajoutez
-export ROS_MASTER_URI=http://tiago-202c:11311  # Ajustez le nom du robot
-export ROS_IP=10.68.0.XX  # Ajustez selon votre IP
-```
-
-> **Note**: Vérifiez la connexion avec `rostopic list`
-
-## 4. Installation de ROS Conda Wrapper
-
-### 4.1 Installation
-
-```bash
-# Clone du repository
-git clone https://github.com/rickstaa/.ros_conda_wrapper.git
-cd .ros_conda_wrapper
-
-# Installation
-chmod +x ./install.sh
-sh ./install.sh
-```
-
-### 4.2 Configuration de l'Environnement Conda
-
-Modifiez le `.bashrc` en ajoutant après la ligne `# <<< ros_conda_wrapper initialize <<<` :
-
+2. Configurez le fichier `.bashrc` avec les lignes suivantes à la fin du fichier :
 ```bash
 source /usr/share/cesi-conda/miniconda3cesi/bin/activate
-conda activate cesi-python
+source /opt/pal/gallium/setup.bash
+source /usr/share/cesi-tiago-package/behaviour_tree/ws_behaviotree/devel/setup.bash
+export ROS_MASTER_URI=http://tiago-202c:11311    # Le nom du robot est à ajuster selon le vôtre
+export ROS_IP=10.68.0.XX                        # À ajuster selon votre adresse IP dans le conteneur
 ```
 
 ## Notes Importantes
