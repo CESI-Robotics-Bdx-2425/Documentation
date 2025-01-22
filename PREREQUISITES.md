@@ -8,6 +8,10 @@ Ce guide détaille l'installation complète de Docker Engine sur Ubuntu, en suiv
 - Un utilisateur avec les droits sudo
 - Une connexion internet stable
 
+## 0. Tuto Vidéo
+
+https://youtu.be/DVZ1uU4cbGc?si=dCR65xt3j9HbFHBA
+
 ## 1. Préparation du système
 
 ### 1.1 Mise à jour du système
