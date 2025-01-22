@@ -6,7 +6,7 @@ Ce guide détaille la mise en place de l'environnement de développement pour le
 
 - Ubuntu 20.04
 - Docker installé et configuré
-- Image Docker fournie par CESI (`docker_tiagocesi_container_full.tar.gz`)
+- Image Docker fournie par CESI (`docker_tiagocesi_container_full.tar.gz`) (demandé au pilote de l'option)
 
 ## 1. Configuration de l'Environnement Docker
 
