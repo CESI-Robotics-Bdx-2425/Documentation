@@ -117,6 +117,11 @@ nano /etc/hosts
 ```
 
 2. Configurez le fichier `.bashrc` avec les lignes suivantes à la fin du fichier :
+
+```bash
+docker exec -it tiago-real bash
+```
+
 ```bash
 source /usr/share/cesi-conda/miniconda3cesi/bin/activate
 source /opt/pal/gallium/setup.bash
