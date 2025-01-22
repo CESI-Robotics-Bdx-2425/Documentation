@@ -41,6 +41,10 @@ Le robot Tiago utilise des Arucos pour la calibration de son environnement, il e
 
 ### Assemblage du support de flyer
 
+## Vidéo
+
+https://youtu.be/MmhG2tn8pBc 
+
 Pour l'assemblage du support de flyer, il est auparavant nécessaire d'avoir préparer avec la découpeuse laser les pièces suivantes :
 - Support_Cote.svg x2
 - Support_Cale.svg x1
