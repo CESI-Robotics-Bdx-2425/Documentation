@@ -244,7 +244,8 @@ Ne jamais utiliser la fonction "Home" native de Tiago. Cette action peut comprom
 
 #### ⚠️ Reprise de contrôle
 
-**Correction d'une information erronée :** Contrairement à ce qui a été indiqué en formation, appuyer sur "start" de la manette ne permet PAS d'interrompre une action en cours.
+> [!IMPORTANT]  
+> **Correction d'une information erronée :** Contrairement à ce qui a été indiqué en formation, appuyer sur "start" de la manette ne permet PAS d'interrompre une action en cours.
 
 **🚨 Procédure d'urgence :**
 - Solution temporaire : Fermer le terminal exécutant l'action
