@@ -73,14 +73,14 @@ L'environnement de travail du robot Tiago nécessite deux tables d'écolier stan
 - Longueur maximale (tables rassemblées) de 1.40 mètre
 - Le robot doit être positionné parallèlement aux tables dans le sens de la longueur
 - Distance critique de 50 centimètres (±1 centimètre) entre la pige et le bord de la table
-    > [!IMPORTANT]  
-    > **Cette mesure doit être prise par rapport au bord de la table et non par rapport aux pieds**
+> [!IMPORTANT]  
+> **Cette mesure doit être prise par rapport au bord de la table et non par rapport aux pieds**
 
 Pour optimiser l'interaction avec le robot, la disposition des supports doit suivre une configuration spécifique :
 - Deux supports positionnés sur la gauche du robot
 - Un support placé sur sa droite
-    > [!WARNING]  
-    > **Les supports ne doivent en aucun cas masquer les marqueurs Aruco présents sur la table**
+> [!WARNING]  
+> **Les supports ne doivent en aucun cas masquer les marqueurs Aruco présents sur la table**
 
 ### Installation des Arucos
 
@@ -92,8 +92,8 @@ Le système de marqueurs Aruco requiert une installation méticuleuse pour garan
 - Positionnement précis :
   - Alignement au centre du support
   - Alignement avec le dessous de la table
-    > [!IMPORTANT]  
-    > **Vérifier la mesure de la taille des Arucos avant le lancement du programme**
+> [!IMPORTANT]  
+> **Vérifier la mesure de la taille des Arucos avant le lancement du programme**
 
 ### Configuration matérielle
 
@@ -134,8 +134,8 @@ Pour l'assemblage du support de flyer, il est nécessaire de préparer préalabl
 - La pince doit être en position de saisie d'un flyer
 - L'articulation doit être alignée avec le marqueur Aruco
 - Le bras doit maintenir une position stable
-    > [!IMPORTANT]  
-    > **Une fois la position stable atteinte, désactiver la compensation de gravité dans WebCommander pour garantir une mesure plus précise.**
+> [!IMPORTANT]  
+> **Une fois la position stable atteinte, désactiver la compensation de gravité dans WebCommander pour garantir une mesure plus précise.**
 
 ### Processus de calibration
 
