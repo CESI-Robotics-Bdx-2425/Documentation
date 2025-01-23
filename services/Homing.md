@@ -73,7 +73,7 @@ Pour utiliser le service Homing, suivez ces étapes :
    Une fois le service démarré, vous pouvez appeler le service `homing` pour ramener le robot à sa position d'origine. Utilisez la commande suivante :
 
    ```bash
-   rosservice call /homing
+   rosservice call /homing "{}"
    ```
 
 8. **Appeler le service dans le code** : 
@@ -97,7 +97,3 @@ Pour utiliser le service Homing, suivez ces étapes :
 
 - Assurez-vous que l'environnement du robot est correctement configuré avec MoveIt! et que le groupe de planification pour les bras et le torse (`both_arms_torso`) est disponible.
 - Les valeurs de `joint_home` représentent la position d'origine souhaitée du robot. Vous pouvez ajuster ces valeurs en fonction de la configuration exacte de votre robot.
-
-## Licence
-
-Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
