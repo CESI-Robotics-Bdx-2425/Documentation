@@ -170,11 +170,12 @@ cat project_ws/src/camera_arm_calibration/config/aruco.npy
 
 ### Prérequis au démarrage
 
-**⚠️ Important :** Avant de lancer le programme, s'assurer que :
-- L'environnement physique est correctement installé
-- Les supports de flyers sont en place
-- Les marqueurs Aruco sont correctement positionnés
-- La calibration du robot a été effectuée
+> [!IMPORTANT]  
+> Avant de lancer le programme, s'assurer que :
+> - L'environnement physique est correctement installé
+> - Les supports de flyers sont en place
+> - Les marqueurs Aruco sont correctement positionnés
+> - La calibration du robot a été effectuée
 
 ### Lancement du programme
 
