@@ -269,7 +269,7 @@ Ne jamais utiliser la fonction "Home" native de Tiago. Cette action peut comprom
 
 **🎯 Problème :** Imprécision occasionnelle dans la saisie des flyers
 
-**✅ Solution :** Recalibrer les bras du robot (voir section [Calibration](#réglage-du-robot--calibration))
+**✅ Solution :** Recalibrer les bras du robot (voir section [Calibration](#4-réglage-du-robot--calibration))
 
 ## 8. Ressources
 

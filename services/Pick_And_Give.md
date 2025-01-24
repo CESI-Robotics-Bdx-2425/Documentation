@@ -48,8 +48,8 @@ Cette classe contient la logique principale pour le service de pick-and-place.
 - **`mouvementPince(self, state, arm)`** : 
   Ouvre ou ferme la pince du bras spécifié (gauche ou droit) en fonction du paramètre `state` (`open` ou `close`).
   
-- **`pick_and_place_handler(self, req)`** : 
-  La fonction principale pour gérer le service ROS `pick_and_place`. Elle traite la requête, effectue la tâche de pick-and-place, et renvoie une réponse vide après la fin de la tâche.
+- **`pick_and_give_handler(self, req)`** : 
+  La fonction principale pour gérer le service ROS `pick_and_give`. Elle traite la requête, effectue la tâche de pick-and-place, et renvoie une réponse vide après la fin de la tâche.
 
 ## Edition du service
 
@@ -96,7 +96,7 @@ Pour lancer l'environement DEV, afin d'éditer le service de pick-and-give, suiv
    Exemple :
 
    ```bash
-   rosservice call /pick_and_place "coordinates:
+   rosservice call /pick_and_give "coordinates:
     header:
       seq: 0
       stamp:
