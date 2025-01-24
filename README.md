@@ -118,16 +118,10 @@ Pour l'assemblage du support de flyer, il est nécessaire de préparer préalabl
 Lors du démarrage du robot, assurez-vous que l'entièreté des supports sont remplis.
 Si le robot dit qu'il faut remplir l'un supports, il faudra remplir tous les supports (et pas uniquement celui qui est vide.)
 
-Pour cela, il faut :
+**Pour cela, il faut :**
 - cliquer sur le bouton de refill dans les paramètres de l'interface graphique.
 - remplir TOUS les supports (pas uniquement celui qui est vide).
 - cliquer sur le bouton de fin de refill dans les paramètres de l'interface graphique.
-
-**🔧 Configuration requise :**
-- Utilisation d'un switch réseau pour la connexion de plusieurs ordinateurs
-- Configuration des pinces :
-  - Une pince d'origine sur une main
-  - Une pince imprimée en 3D sur l'autre main (Voir [Ressources](#ressources))
 
 ## 4. Réglage du robot / Calibration
 
