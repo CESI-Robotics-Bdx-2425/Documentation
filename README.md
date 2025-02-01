@@ -113,6 +113,16 @@ Pour l'assemblage du support de flyer, il est nécessaire de préparer préalabl
 ### Vidéo récapitulative :
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/MmhG2tn8pBc/0.jpg)](http://www.youtube.com/watch?v=MmhG2tn8pBc "Video Title")
 
+### Remplissage support de flyer
+
+Lors du démarrage du robot, assurez-vous que l'entièreté des supports sont remplis.
+Si le robot dit qu'il faut remplir l'un supports, il faudra remplir tous les supports (et pas uniquement celui qui est vide.)
+
+**Pour cela, il faut :**
+- cliquer sur le bouton de refill dans les paramètres de l'interface graphique.
+- remplir TOUS les supports (pas uniquement celui qui est vide).
+- cliquer sur le bouton de fin de refill dans les paramètres de l'interface graphique.
+
 ## 4. Réglage du robot / Calibration
 
 **👥 Note importante : La calibration nécessite la présence de deux personnes pour une exécution optimale.**
