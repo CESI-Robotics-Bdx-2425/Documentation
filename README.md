@@ -187,6 +187,7 @@ cat project_ws/src/camera_arm_calibration/config/aruco.npy
 > - Les supports de flyers sont en place
 > - Les marqueurs Aruco sont correctement positionnés
 > - La calibration du robot a été effectuée
+> - Avoir démarré la capture sonore sur l'interface de [controle de Tiago](http://10.68.0.1:8080) `Startup Extras > cesi_publish_sound`
 
 ### Lancement du programme
 
@@ -217,6 +218,10 @@ ifconfig
 - URL d'accès : `http://10.68.0.XX:8000`
 
 **⚡ Note :** En cas de non-fonctionnement de la tablette, privilégier l'utilisation d'un écran déporté pour une meilleure stabilité.
+
+### Mettre Tiago en Pause
+
+Pour interrompre la détéction d'un visage, il est nécessaire d'arreter le service suivant : `Startup > face_processor`
 
 ## 6. Services
 
