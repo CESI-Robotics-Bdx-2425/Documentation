@@ -192,6 +192,9 @@ cat project_ws/src/camera_arm_calibration/config/aruco.npy
 
 1. **Démarrage du système :**
 ```bash
+cd ~/project-ws
+conda activate cesi-python
+source devel/setup.bash
 roslaunch state_machine state_machine.launch
 ```
 
